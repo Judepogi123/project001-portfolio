@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Button from "./components/Button";
+import Button from "./components/ui/Button";
 
 import Home from "./routes/Home";
 

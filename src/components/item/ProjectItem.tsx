@@ -2,18 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-interface ProjectProps {
-  id: string;
-  title: string;
-  imgSrc: string[];
-  desc: string;
-  date: string;
-  client?: string;
-  type: string;
-  setOnView:  React.Dispatch<React.SetStateAction<boolean>>
-}
+//Interfaces
+import { ProjectItemProps } from "../../interface/data";
 
-const ProjectItem = ({ id, title, imgSrc,desc,date,client,type,setOnView }: ProjectProps) => {
+const ProjectItem = ({ id, title, imgSrc,desc,date,client,type,setOnView, setSelectedProject }: ProjectItemProps) => {
   const [isLoading, setIsLoading] = useState(true); // Track image loading state
   const [error, setError] = useState<string | null>(null); // Store potential errors
 
@@ -32,14 +24,14 @@ const ProjectItem = ({ id, title, imgSrc,desc,date,client,type,setOnView }: Proj
     };
   }, [imgSrc[0]]); // Re-run effect on imgSrc change
 
-  const handleSetOnView =()=>{  
+  const handleSetOnView =(id: string)=>{  
     console.log("CLicked");
-      
+    setSelectedProject(id)
     setOnView(true)
   }
 
   return (
-    <div onClick={handleSetOnView} className=" w-full h-full border rounded-sm p-4 bg-white opacity-80 backdrop-blur cursor-pointer">
+    <div onClick={()=> handleSetOnView(id)} className=" w-full h-full border rounded-sm p-4 bg-white opacity-80 backdrop-blur cursor-pointer">
       <div className=" w-full h-2/3 rounded-sm ">
         {isLoading && <p>Loading...</p>}
         {error && <p className="text-red-500">{error}</p>}
