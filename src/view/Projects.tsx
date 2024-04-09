@@ -5,8 +5,10 @@ import { projectList } from "../_mock_data/projectList";
 import ProjectItem from "../components/item/ProjectItem";
 import LayoutModal from "../components/ui/LayoutModal";
 
+
 const Projects = () => {
     const [onView, setOnView] = useState<boolean>(false)
+    const [selectedProject, setSelectedProject] = useState<string |null>(null)
     console.log(onView);
     
   return (
