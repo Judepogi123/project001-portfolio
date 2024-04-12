@@ -4,6 +4,7 @@ import "../style.css";
 //View
 import LandingPage from "../view/LandingPage";
 import Projects from "../view/Projects";
+import TechStack from "../view/TechStack";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
     >
       <div className=" w-[100%] h-[100vh] ">
         <LandingPage />
+      </div>
+      <div className=" w-[100%] h-[100vh] ">
+        <TechStack />
       </div>
       <div className=" w-[100%] h-[100vh]">
         <Projects />

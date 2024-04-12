@@ -12,7 +12,6 @@ const LayoutModal = ({ children, setOnView,setSelectedProject }: LayoutProps) =>
     if (e.target instanceof Element && e.target.id === "parent") {
       setSelectedProject(null)
       setOnView(false);
-
     }
   };
 
@@ -24,7 +23,7 @@ const LayoutModal = ({ children, setOnView,setSelectedProject }: LayoutProps) =>
     >
       <div
         id="child"
-        className="w-4/5 h-4/5 opacity-100 border bg-slate-400 backdrop-blur z-50"
+        className="w-4/5 h-4/5 opacity-100 border bg-slate-400 z-50"
       >
         {children}
       </div>

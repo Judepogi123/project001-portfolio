@@ -9,7 +9,6 @@ import ViewProject from "./ViewProject";
 const Projects = () => {
   const [onView, setOnView] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  console.log(onView);
 
   return (
     <div
