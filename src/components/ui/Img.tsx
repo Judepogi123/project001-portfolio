@@ -32,7 +32,7 @@ const Img = ({ ...props }: ImageProps) => {
         // ... other code
         <Link to={props.src}>
           <img
-           className=" w-full h-full"
+           className={props.className}
             src={props.src}
             alt="Image"
             onError={(e) => {

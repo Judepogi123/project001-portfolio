@@ -6,28 +6,28 @@ import { FaGithub } from "react-icons/fa";
 
 const LandingPage = () => {
   return (
-    <div className=" w-screen h-screen flex">
+    <div className=" w-screen h-screen flex flex-col lg:flex-row">
       {/* Left-side Info */}
-      <div className=" w-2/5 h-screen text-right flex items-center justify-end">
+      <div className=" w-full lg:w-2/5 h-screen text-center lg:text-right flex items-end lg:items-center justify-center lg:justify-end ">
         <div className=" w-auto flex flex-col">
           <div className="">
-            <h1 className=" font-bold font-custom1 text-4xl">Jude Demnuvar L. Ribleza</h1>
+            <h1 className=" font-bold font-custom1 text-2xl lg:text-4xl">Jude Demnuvar L. Ribleza</h1>
           </div>
 
-          <div className=" w-auto flex gap-1 font-semibold font-custom1 justify-end">
-            <h2 className=" text-[#c1121f] text-2xl">Web</h2>
-            <h2 className="text-2xl">Developer</h2>
+          <div className=" w-auto flex gap-1 font-semibold font-custom1 justify-center lg:justify-end">
+            <h2 className=" text-[#c1121f] text-xl lg:text-2xl">Web</h2>
+            <h2 className=" text-xl lg:text-2xl">Developer</h2>
           </div>
         </div>
       </div>
 
       {/* vertical Divider */}
-      <div className=" w-auto h-screen p-2 flex items-center">
-        <span className=" w-[1px] h-[60%] bg-[#242424]"></span>
+      <div className=" w-full h-auto lg:w-auto lg:h-screen p-2 flex justify-center items-center">
+        <span className="w-[90%] h-[1px] lg:w-[1px] lg:h-[60%] bg-[#242424]"></span>
       </div>
 
       {/* RIght-side Info */}
-      <div className=" w-3/5 h-screen flex items-center">
+      <div className=" w-full lg:w-3/5 h-full flex items:start lg:items-center justify-center lg:justify-start ">
         <div className=" w-auto h-auto flex flex-col gap-0">
           <div className=" w-auto p-2 flex items-center gap-4">
             <SiGmail fontSize={25} color="#495057"/>

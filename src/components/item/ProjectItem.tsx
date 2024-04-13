@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 //Interfaces
 import { ProjectItemProps } from "../../interface/data";
 
+import Img from "../ui/Img";
+
 const ProjectItem = ({ id, title, imgSrc,desc,date,client,type,setOnView, setSelectedProject }: ProjectItemProps) => {
   const [isLoading, setIsLoading] = useState(true); // Track image loading state
   const [error, setError] = useState<string | null>(null); // Store potential errors
@@ -33,18 +35,7 @@ const ProjectItem = ({ id, title, imgSrc,desc,date,client,type,setOnView, setSel
   return (
     <div onClick={()=> handleSetOnView(id)} className=" w-full h-full border rounded-sm p-4 bg-white opacity-80 backdrop-blur cursor-pointer">
       <div className=" w-full h-2/3 rounded-sm ">
-        {isLoading && <p>Loading...</p>}
-        {error && <p className="text-red-500">{error}</p>}
-        {!isLoading && !error && (
-          // ... other code
-          <img
-            src={imgSrc[0]}
-            alt="Project"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "placeholder.jpg";
-            }}
-          />
-        )}
+        <Img src={imgSrc[0]} onLoad={true}/>
       </div>
       <div className=" w-full flex flex-col gap-3">
         <p className=" font-custom1 font-semibold text-base">{title}</p>

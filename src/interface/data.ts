@@ -25,4 +25,5 @@ export interface TechStackProps {
 export interface ImageProps {
   src: string;
   onLoad: boolean;
+  className?: string;
 }
