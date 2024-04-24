@@ -27,3 +27,18 @@ export interface ImageProps {
   onLoad: boolean;
   className?: string;
 }
+
+export interface TimelineDataProps {
+  id: string
+  title: string;
+  timestamp: string;
+  desc: string;
+  schoolAttended: string;
+  course: string | undefined
+}
+
+export interface AnimationProps {
+  className: string;
+  src?: unknown
+  loop: boolean;
+}

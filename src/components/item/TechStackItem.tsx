@@ -7,7 +7,7 @@ import Img from "../ui/Img";
 
 const TechStackItem = ({ ...props }: TechStackProps) => {
   return (
-    <div className=" w-full h-[90px] shadow-md border rounded">
+    <div className=" w-full h-[100px] shadow-md border rounded">
       <div className=" w-full h-[70%] p-1">
         <div className="w-full h-full flex justify-center p-2">
           <Img
@@ -18,7 +18,7 @@ const TechStackItem = ({ ...props }: TechStackProps) => {
         </div>
       </div>
       <div className=" w-full h-[30$] text-center">
-        <p className=" font-custom1 font-medium">{props.name}</p>
+        <p className=" font-custom1 font-medium text-xs lg:text-base">{props.name}</p>
       </div>
     </div>
   );
